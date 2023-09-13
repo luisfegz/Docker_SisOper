@@ -5,15 +5,15 @@
 int main() {
     int n, i;
     unsigned long long fact = 1;
-    printf("Enter an integer: ");
+    printf("Ingresa un entero: ");
     scanf("%d", &n);
     if (n < 0)
-        printf("Error! Factorial of a negative number doesn't exist.");
+        printf("¡Error! Factorial de un número negativo no existe.");
     else {
         for (i = 1; i <= n; ++i) {
             fact *= i;
         }
-        printf("Factorial of %d = %llu", n, fact);
+        printf("Factorial de %d = %llu", n, fact);
     }
     return 0;
 }
