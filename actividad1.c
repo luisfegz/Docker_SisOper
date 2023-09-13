@@ -4,24 +4,24 @@
 
 int main() {
     int n, i, flag = 0;
-    printf("Enter a positive integer: ");
+    printf("Ingrese un número entero positivo: ");
     scanf("%d", &n);
-    // 0 and 1 are not prime numbers
-    // change flag to 1 for non-prime number
+    // 0 y 1 no son números primos
+    // cambia la bandera a 1 para números no primos
     if (n == 0 || n == 1)
         flag = 1;
     for (i = 2; i <= n / 2; ++i) {
-        // if n is divisible by i, then n is not prime
-        // change flag to 1 for non-prime number
+        // si n es divisible por i, entonces n no es primo
+        // cambia la bandera a 1 para números no primos
         if (n % i == 0) {
             flag = 1;
             break;
         }
     }
-    // flag is 0 for prime numbers
+    // la bandera es 0 para números primos
     if (flag == 0)
-        printf("%d is a prime number.", n);
+        printf("%d es un número primo.", n);
     else
-        printf("%d is not a prime number.", n);
+        printf("%d no es un número primo.", n);
     return 0;
 }
